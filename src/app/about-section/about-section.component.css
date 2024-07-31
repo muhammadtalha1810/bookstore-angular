@@ -1,0 +1,78 @@
+#second-section{
+    width: 100%;
+    background-color:rgb(255, 244, 231);
+    padding: 60px 0px;
+  }
+  #about-us{
+    display: block;
+    width: 75%;
+    margin: auto;
+  }
+  #aboutus-container{
+    display: inline-block;
+    width: 40%;
+    margin-right: 9.5%;
+  }
+  .sub-headings{
+    text-transform: capitalize;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #form{
+    display: inline-block;
+    width: 40%;
+    margin-left: 9.5%;
+    vertical-align: top;
+  }
+  .label{
+    display: block;
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: 300;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  #fname{
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  #email{
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+  }
+  #message{
+    display: block;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: large;
+    width: 350px;
+    height: 150px;
+  }
+  #submit-btn{
+    background: darkblue;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: large;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+  #submit-btn:hover{
+    cursor: pointer;
+  }
+  h2{
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serifs;
+    padding-bottom: 20px;
+    font-size: xx-large;
+    text-transform: capitalize;
+  }

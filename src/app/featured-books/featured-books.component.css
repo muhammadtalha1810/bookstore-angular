@@ -1,0 +1,88 @@
+#first-section{
+    width: 100%;
+    background-color: aliceblue;
+    padding: 60px 0px;
+  }
+  h2{
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serifs;
+    padding-bottom: 20px;
+    font-size: xx-large;
+    text-transform: capitalize;
+  }
+  #top-books-container{
+    display: block;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+    padding: 30px;
+  }
+  .book-image{
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 20px rgb(194, 194, 194);
+    border-radius: 10px;
+    vertical-align: middle;
+  }
+  .book-image:hover{
+    cursor: pointer;
+    
+  }
+  #central-image{
+    margin-left: 9.375%;
+    margin-right: 9.375%;
+  }
+  .sec1text{
+    text-align: center;
+    font-size: medium;
+  }
+  table{
+    margin: 20px auto;
+    padding: 20px;
+    font-size: large;
+    border-spacing: 0px;
+  }
+  .table-entry{
+    border-top: 1px solid black;
+    padding: 8px 20px;
+    text-align: center;
+  }
+  .left-entry{
+    border-top: 1px solid black;
+    padding: 8px 20px 8px 0px;
+    text-align: center;
+  }
+  .right-entry{
+    border-top: 1px solid black;
+    padding: 8px 0px 8px 20px;
+    text-align: center;
+  }
+  #buynow-table{
+    font-size: large;
+    color: darkblue;
+    border: none;
+    background-color: transparent;
+  }
+  #buynow-table:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #view-books{
+    background: darkblue;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: large;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    display: block;
+    width: auto;
+    margin: auto;
+  }
+  #view-books:hover{
+    cursor: pointer;
+  }
