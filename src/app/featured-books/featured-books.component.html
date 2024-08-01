@@ -27,6 +27,13 @@
         <th class="table-header">Author</th>
         <th class="table-header">Price</th>
       </tr>
+      <tr *ngFor="let item of booksList">
+        <td>{{item.title}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.imageUrl}}</td>
+      </tr>
     </table>
+    
     <button id="view-books">Load More Books</button>
   </div>
