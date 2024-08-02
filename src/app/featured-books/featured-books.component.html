@@ -1,39 +1,50 @@
 <div id="first-section">
-    <h2>Featured Books</h2>
-    <p class="sec1text">The most popular fiction books are shown below.</p>
-    <div id="top-books-container">
-      <img
-        class="book-image"
-        src="../../assets/img1.jpg"
-        alt="Cover Page of Monticello"
-      />
-      <img
-        class="book-image"
-        id="central-image"
-        src="../../assets/img2.jpg"
-        alt="Cover Page of Cloud Cuckoo Land"
-      />
-      <img
-        class="book-image"
-        src="../../assets/img3.jpg"
-        alt="Cover Page of Lauren Groff"
-      />
-    </div>
-    <p class="sec1text">Here is a list of popular fiction books available for sale.</p>
-    <table>
-      <tr>
-        <th class="table-header"></th>
-        <th class="table-header">Title</th>
-        <th class="table-header">Author</th>
-        <th class="table-header">Price</th>
-      </tr>
-      <tr *ngFor="let item of booksList">
-        <td>{{item.title}}</td>
-        <td>{{item.author}}</td>
-        <td>{{item.price}}</td>
-        <td>{{item.imageUrl}}</td>
-      </tr>
-    </table>
-    
-    <button id="view-books">Load More Books</button>
+  <h2>Featured Books</h2>
+  <p class="sec1text">The most popular fiction books are shown below.</p>
+  <div id="top-books-container">
+    <img
+      class="book-image"
+      src="./assets/img1.jpg"
+      alt="Cover Page of Monticello"
+    />
+    <img
+      class="book-image"
+      id="central-image"
+      src="../../assets/img2.jpg"
+      alt="Cover Page of Cloud Cuckoo Land"
+    />
+    <img
+      class="book-image"
+      src="../../assets/img3.jpg"
+      alt="Cover Page of Lauren Groff"
+    />
   </div>
+  <p class="sec1text">
+    Here is a list of popular fiction books available for sale.
+  </p>
+  <table>
+    <tr>
+      <th class="table-header"></th>
+      <th class="table-header">Title</th>
+      <th class="table-header">Author</th>
+      <th class="table-header">Price</th>
+    </tr>
+    <tr *ngFor="let item of booksList">
+      <td class="left-entry">
+        <img
+          [src] = "item.imageUrl"
+          alt="First Image"
+          style="width: 20px; display: block"
+        />
+      </td>
+      <td class="table-entry">{{ item.title }}</td>
+      <td class="table-entry">{{ item.author }}</td>
+      <td class="table-entry">Rs {{ item.price }}</td>
+      <td class="right-entry">
+        <button id="buynow-table">Buy Now</button>
+      </td>
+    </tr>
+  </table>
+
+  <button id="view-books" (click)="loadmorebooks()">Load More Books</button>
+</div>
