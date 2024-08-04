@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Books } from '../books';
 import { BookComponent } from '../book/book.component';
 import { NgFor } from '@angular/common';
-import * as $ from 'jquery';
+import { BooksdataService } from '../booksdata.service';
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-featured-books',
@@ -11,6 +12,45 @@ import * as $ from 'jquery';
   templateUrl: './featured-books.component.html',
   styleUrl: './featured-books.component.css',
 })
+export class FeaturedBooksComponent implements OnInit {
+  booksList: any[] = [];
+
+  constructor(private bookService: BooksdataService) {}
+
+  ngOnInit(): void {
+    this.fetchBooks();
+  }
+
+  fetchBooks(): void {
+    this.bookService.getBooks().subscribe(
+      (data) => {
+        this.booksList = data.slice(0,5);
+      },
+      (error) => {
+        console.error('Error fetching books: ', error);
+      }
+    );
+  }
+
+  loadmorebooks():void{
+    this.bookService.getBooks().subscribe(
+      (data) => {
+        for(let i = this.booksList.length; i < data.length ; i++)
+        {
+          this.booksList.push(data[i]);
+        }
+      },
+      (error) => {
+        console.error('Error fetching books: ', error);
+      }
+    );
+  }
+}
+
+
+
+/*
+
 export class FeaturedBooksComponent implements OnInit {
   booksList: any = [];
   loadbookindex:number = 0;
@@ -52,3 +92,5 @@ export class FeaturedBooksComponent implements OnInit {
     });
   }
 }
+
+*/

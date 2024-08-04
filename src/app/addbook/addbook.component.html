@@ -1,0 +1,20 @@
+<div id="Add-Book-container">
+    <div id="add-book">
+      <form (submit)="addbook($event)"  action="https://localhost:7015/api/books" method="post" id="add-book-form">
+        <Label for="book-id" class="label">Book ID</Label>
+        <input type="number" required name="id" id="book-id" placeholder="10" class="add-book-input">
+        <Label for="book-title" class="label">Book Title</Label>
+        <input type="text" required name="title" id="book-title" placeholder="Book Title" class="add-book-input">
+        <Label for="book-author" class="label">Book Author</Label>
+        <input type="text" required name="author" id="book-author" placeholder="Book Author" class="add-book-input">
+        <Label for="book-price" class="label">Book Price</Label>
+        <input type="number" required name="price" id="book-price" placeholder="9,999.00" class="add-book-input">
+        <Label for="book-imageurl" class="label">Book Image Url</Label>
+        <input type="text" required name="imageUrl" id="book-imageurl" placeholder="https://example.com/image" class="add-book-input">
+        <input type="submit" value="Add Book" id="add-book-btn">
+      </form>
+      <button id="cancel-btn">Cancel</button>
+    </div>
+    
+    
+  </div>
