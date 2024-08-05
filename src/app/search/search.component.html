@@ -1,5 +1,28 @@
 <div id="search-container">
-    <div id="searched-books">
-      
-    </div>
+  <div id="searchbar">
+    <span>🔍</span>
+    <input
+      type="text"
+      placeholder="Search Books"
+      id="searchinput"
+      (keyup)="performSearch()"
+    />
   </div>
+  <div id="emptytext" *ngIf="booksList.length === 0; else searchedbooks">
+    <img src="./assets/searchimage.png" alt="Search Image" id="emptyimage" />
+    {{ textcontent }}
+  </div>
+  <ng-template #searchedbooks style="display: block; width: 100%">
+    <div id="searched-books" >
+      <div *ngFor="let item of booksList" class="searched-book">
+        <img
+          [src]="item.imageUrl"
+          alt="Cover Page"
+          class="searched-book-image"
+        />
+        <p class="searched-book-title">{{ item.title }}</p>
+          <p class="searched-book-author">{{ item.author }}</p>
+      </div>
+    </div>
+  </ng-template>
+</div>

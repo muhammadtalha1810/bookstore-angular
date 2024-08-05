@@ -1,6 +1,7 @@
 <div id="Add-Book-container">
     <div id="add-book">
-      <form (submit)="addbook($event)"  action="https://localhost:7015/api/books" method="post" id="add-book-form">
+      <h3 id="main-heading">Add New Book</h3>
+      <form (submit)="addbook($event)" id="add-book-form">
         <Label for="book-id" class="label">Book ID</Label>
         <input type="number" required name="id" id="book-id" placeholder="10" class="add-book-input">
         <Label for="book-title" class="label">Book Title</Label>
@@ -13,8 +14,5 @@
         <input type="text" required name="imageUrl" id="book-imageurl" placeholder="https://example.com/image" class="add-book-input">
         <input type="submit" value="Add Book" id="add-book-btn">
       </form>
-      <button id="cancel-btn">Cancel</button>
     </div>
-    
-    
   </div>

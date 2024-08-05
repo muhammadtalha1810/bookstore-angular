@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './about-section.component.css'
 })
 export class AboutSectionComponent {
-
+  sendmessage(e:any):void{
+    e.preventDefault();
+  }
 }

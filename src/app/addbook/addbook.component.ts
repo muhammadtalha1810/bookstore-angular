@@ -15,13 +15,13 @@ export class AddbookComponent {
   addbook(e:any):void{
     e.preventDefault();
     var formData = { 
-      id :      document.getElementById('book-id')?.textContent, 
-      title:    document.getElementById('book-title')?.textContent, 
-      author:   document.getElementById('book-author')?.textContent, 
-      price:    document.getElementById('book-price')?.textContent,  
-      imageUrl: document.getElementById('book-imageurl')?.textContent,};
+      id:       (<HTMLInputElement>document.getElementById('book-id')).value, 
+      title:    (<HTMLInputElement>document.getElementById('book-title')).value,
+      author:   (<HTMLInputElement>document.getElementById('book-author')).value, 
+      price:    (<HTMLInputElement>document.getElementById('book-price')).value, 
+      imageUrl: (<HTMLInputElement>document.getElementById('book-imageurl')).value};
     
-    this.bookService.addBook(JSON.stringify(formData)).subscribe(
+    this.bookService.addBook(formData).subscribe(
       (response) => {
         console.log('Book added successfully: ', response);
         // Optionally, fetch books again to refresh the list after adding

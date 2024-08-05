@@ -42,21 +42,3 @@ nav{
     text-decoration: underline;
     cursor: pointer;
   }
-  #search-box{
-    font-size: medium;
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
-    top: 20px;
-    right: 100px;
-    position: fixed;
-    border: none;
-    padding: 5px 5px;
-    border-bottom: 1px solid black;
-    width: 200px;
-    transition: 300ms;
-  }
-  #search-box:focus{
-    outline: none;
-    width: 350px;
-  }
