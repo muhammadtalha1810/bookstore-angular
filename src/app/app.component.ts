@@ -4,12 +4,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component'
 import { HeaderComponent } from './header/header.component';
 import { FeaturedBooksComponent } from './featured-books/featured-books.component';
 import { MainContentComponent } from './main-content/main-content.component';
-import { NotificationComponent } from './notification/notification.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, HeaderComponent, FeaturedBooksComponent, MainContentComponent, NotificationComponent],
+  imports: [RouterOutlet, NavBarComponent, HeaderComponent, FeaturedBooksComponent, MainContentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

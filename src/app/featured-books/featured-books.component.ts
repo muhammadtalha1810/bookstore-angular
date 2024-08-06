@@ -1,24 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { Books } from '../books';
-import { BookComponent } from '../book/book.component';
+import { Component, EventEmitter, OnInit} from '@angular/core';
 import { NgFor } from '@angular/common';
 import { BooksdataService } from '../booksdata.service';
+import { Output } from '@angular/core';
 //import * as $ from 'jquery';
 
 @Component({
   selector: 'app-featured-books',
   standalone: true,
-  imports: [BookComponent, NgFor],
+  imports: [NgFor],
   templateUrl: './featured-books.component.html',
   styleUrl: './featured-books.component.css',
 })
 export class FeaturedBooksComponent implements OnInit {
   booksList: any[] = [];
 
-  constructor(private bookService: BooksdataService) {}
+  @Output() myevent = new EventEmitter();
+
+  constructor(private bookService: BooksdataService) {
+   
+  }
 
   ngOnInit(): void {
     this.fetchBooks();
+    
   }
 
   fetchBooks(): void {
@@ -33,6 +37,8 @@ export class FeaturedBooksComponent implements OnInit {
   }
 
   loadmorebooks():void{
+    this.myevent.emit("Load Books Clicked");
+    console.log("Clicked1");
     this.bookService.getBooks().subscribe(
       (data) => {
         for(let i = this.booksList.length; i < data.length ; i++)
